@@ -14,6 +14,10 @@ source=(http://dl.suckless.org/st/$pkgname-$pkgver.tar.gz
 
 prepare() {
 	cd $srcdir/$pkgname-$pkgver
+
+    # Remove terminfo from Makefile
+    sed -i '/tic /d' Makefile
+
     cp $srcdir/config.h config.h
 }
 
@@ -30,4 +34,4 @@ package() {
 }
 
 md5sums=('a3d97ee92215071e6399691edc0f04b0'
-         'e95e5a3a305128cced1bac0867f6c11c')
+         '5475c2a3a166ee4af7ac3674de10b398')
