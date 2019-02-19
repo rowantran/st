@@ -9,8 +9,12 @@ url="https://st.suckless.org"
 license=('MIT')
 depends=('libxft' 'libxext' 'xorg-fonts-misc')
 makedepends=('ncurses')
+
+_patches=("https://st.suckless.org/patches/alpha/st-alpha-0.8.2.diff"
+          "st-alpha-custom.diff")
 source=(http://dl.suckless.org/st/$pkgname-$pkgver.tar.gz
-        config.h)
+        config.h
+        "${_patches[@]}")
 
 prepare() {
 	cd $srcdir/$pkgname-$pkgver
@@ -19,6 +23,14 @@ prepare() {
     sed -i '/tic /d' Makefile
 
     cp $srcdir/config.h config.h
+
+    # Remove lines patching config.def.h
+    sed -i '1,31d' "$srcdir/$(basename ${_patches[0]})"
+
+    for patch in "${_patches[@]}"; do
+        echo "Applying patch $(basename $patch)..."
+        patch -Np1 -i "$srcdir/$(basename $patch)"
+    done
 }
 
 build() {
@@ -34,4 +46,6 @@ package() {
 }
 
 md5sums=('a3d97ee92215071e6399691edc0f04b0'
-         '6883b9362bbe7bbfe1990bfef2b32da1')
+         'e79155748f885496d51dbcab90d0bf41'
+         '1316e2a22a77d8b8906afb63dd66f41b'
+         '80f73f631ff89720664945cc2b21da4c')
