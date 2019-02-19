@@ -32,12 +32,3 @@ index 38c61c4..b7634ab 100644
  extern unsigned int defaultfg;
  extern unsigned int defaultbg;
 +extern float alpha;
-diff --git a/win.h b/win.h
-index a6ef1b9..31f327d 100644
---- a/win.h
-+++ b/win.h
-@@ -36,4 +36,3 @@ void xsetmode(int, unsigned int);
- void xsetpointermotion(int);
- void xsetsel(char *);
- int xstartdraw(void);
--void xximspot(int, int);
