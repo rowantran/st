@@ -10,19 +10,6 @@ index 0cbb002..1d2f0e2 100644
 +LIBS = -L$(X11LIB) -lm -lrt -lX11 -lutil -lXft -lXrender\
         `$(PKG_CONFIG) --libs fontconfig` \
         `$(PKG_CONFIG) --libs freetype2`
- 
-diff --git a/st.c b/st.c
-index cf8687e..b8e6077 100644
---- a/st.c
-+++ b/st.c
-@@ -2594,7 +2594,6 @@ draw(void)
- 			term.ocx, term.ocy, term.line[term.ocy][term.ocx]);
- 	term.ocx = cx, term.ocy = term.c.y;
- 	xfinishdraw();
--	xximspot(term.ocx, term.ocy);
- }
- 
- void
 diff --git a/st.h b/st.h
 index 38c61c4..b7634ab 100644
 --- a/st.h
