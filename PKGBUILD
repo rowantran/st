@@ -10,7 +10,7 @@ license=('MIT')
 depends=('libxft' 'libxext' 'xorg-fonts-misc')
 makedepends=('ncurses')
 
-_patches=("https://st.suckless.org/patches/alpha/st-alpha-0.8.2.diff"
+_patches=("st-alpha-0.8.2.diff"
           "st-alpha-custom.diff")
 source=(http://dl.suckless.org/st/$pkgname-$pkgver.tar.gz
         config.h
