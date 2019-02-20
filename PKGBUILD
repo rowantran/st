@@ -24,9 +24,6 @@ prepare() {
 
     cp $srcdir/config.h config.h
 
-    # Remove lines patching config.def.h
-    sed -i '1,31d' "$srcdir/$(basename ${_patches[0]})"
-
     for patch in "${_patches[@]}"; do
         echo "Applying patch $(basename $patch)..."
         patch -Np1 -i "$srcdir/$(basename $patch)"
@@ -46,6 +43,6 @@ package() {
 }
 
 md5sums=('a3d97ee92215071e6399691edc0f04b0'
-         'SKIP'
-         '7fa415a35137af0a9d45e0e7e8edd457'
+         '7ea9dd38a5a290538c9ea6e2f5121b4a'
+         'c219705aa98be69d1707597aece765ac'
          '80f73f631ff89720664945cc2b21da4c')
