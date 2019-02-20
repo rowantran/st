@@ -7,11 +7,11 @@ pkgdesc="Simple terminal emulator from Suckless"
 arch=('x86_64')
 url="https://st.suckless.org"
 license=('MIT')
-depends=('libxft' 'libxext' 'xorg-fonts-misc')
+depends=('libxft')
 makedepends=('ncurses')
 
-_patches=("st-alpha-0.8.2.diff"
-          "st-alpha-custom.diff")
+_patches=("st-alpha-1-$pkgver.diff"
+          "st-alpha-2-$pkgver.diff")
 source=(http://dl.suckless.org/st/$pkgname-$pkgver.tar.gz
         config.h
         "${_patches[@]}")
