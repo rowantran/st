@@ -2,7 +2,7 @@
 
 pkgname=st
 pkgver=0.8.2
-pkgrel=1
+pkgrel=3
 pkgdesc="Simple terminal emulator from Suckless"
 arch=('x86_64')
 url="https://st.suckless.org"
@@ -11,7 +11,9 @@ depends=('libxft')
 makedepends=('ncurses')
 
 _patches=("st-alpha-1-$pkgver.diff"
-          "st-alpha-2-$pkgver.diff")
+          "st-alpha-2-$pkgver.diff"
+          "st-scrollback-$pkgver.diff"
+          "st-scrollback-mouse-$pkgver.diff")
 source=(http://dl.suckless.org/st/$pkgname-$pkgver.tar.gz
         config.h
         "${_patches[@]}")
@@ -43,6 +45,8 @@ package() {
 }
 
 md5sums=('a3d97ee92215071e6399691edc0f04b0'
-         '7ea9dd38a5a290538c9ea6e2f5121b4a'
+         '768e0225d8862785de5754fe537e7208'
          'c219705aa98be69d1707597aece765ac'
-         '80f73f631ff89720664945cc2b21da4c')
+         '80f73f631ff89720664945cc2b21da4c'
+         '939ad5870f6c2d50e2110f09dc44a2de'
+         'e8d2c7fca59c3c0f322e7f832029e4e3')
