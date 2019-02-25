@@ -2,7 +2,7 @@
 
 pkgname=st
 pkgver=0.8.2
-pkgrel=4
+pkgrel=5
 pkgdesc="Simple terminal emulator from Suckless"
 arch=('x86_64')
 url="https://st.suckless.org"
@@ -10,8 +10,7 @@ license=('MIT')
 depends=('libxft')
 makedepends=('ncurses')
 
-_patches=("st-alpha-1-$pkgver.diff"
-          "st-alpha-2-$pkgver.diff"
+_patches=("st-alpha-$pkgver.diff"
           "st-scrollback-$pkgver.diff"
           "st-scrollback-mouse-$pkgver.diff"
           "st-scrollback-mouse-altscreen-$pkgver.diff")
@@ -46,9 +45,8 @@ package() {
 }
 
 md5sums=('a3d97ee92215071e6399691edc0f04b0'
-         '768e0225d8862785de5754fe537e7208'
-         'c219705aa98be69d1707597aece765ac'
-         '80f73f631ff89720664945cc2b21da4c'
+         '9ba7175e3f0b298f2b6122bb133642e7'
+         '96b75f11218ac1c510c86bc45333ccff'
          '939ad5870f6c2d50e2110f09dc44a2de'
-         'e8d2c7fca59c3c0f322e7f832029e4e3'
+         '8f3e642be09bbdfd8449c5eb0815fd56'
          '47fa64e3ea047fb9184caa01a3e2e86e')
