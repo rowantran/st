@@ -83,7 +83,8 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* background opacity */
-unsigned int alpha = 0xe6;
+//unsigned int alpha = 0xe6;
+unsigned int alpha = 0xff;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {

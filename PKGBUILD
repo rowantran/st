@@ -2,7 +2,7 @@
 
 pkgname=st
 pkgver=0.8.2
-pkgrel=6
+pkgrel=7
 pkgdesc="Simple terminal emulator from Suckless"
 arch=('x86_64')
 url="https://st.suckless.org"
@@ -45,7 +45,7 @@ package() {
 }
 
 md5sums=('a3d97ee92215071e6399691edc0f04b0'
-         '1a6d4884ed0e4fe8df7df5e455a35d60'
+         '12f07f82d54bd0703f73abc38cfdd77a'
          '96b75f11218ac1c510c86bc45333ccff'
          '939ad5870f6c2d50e2110f09dc44a2de'
          '8f3e642be09bbdfd8449c5eb0815fd56'
