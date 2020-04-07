@@ -5,7 +5,7 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Fira Code:size=10:antialias=true:autohint=true";
+static char *font = "Inconsolata:size=12:antialias=true:autohint=true";
 static int borderpx = 2;
 
 /*
@@ -24,7 +24,7 @@ char *stty_args = "stty raw pass8 nl -echo -iexten -cstopb 38400";
 char *vtiden = "\033[?6c";
 
 /* Kerning / character bounding-box multipliers */
-static float cwscale = 1.0;
+static float cwscale = (1.0 / 3.0);
 static float chscale = 1.0;
 
 /*
@@ -94,7 +94,7 @@ static const char *colorname[] = {
     [2] = "#98c379", /* green */
     [3] = "#e5c07b", /* yellow */
     [4] = "#61afef", /* blue */
-    [5] = "#ff79c6", /* magenta */
+    [5] = "#c678dd", /* magenta */
     [6] = "#56b6c2", /* cyan */
     [7] = "#abb2bf", /* white */
 
